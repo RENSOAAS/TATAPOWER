@@ -1,0 +1,165 @@
+:root {
+    --color-100: #E9F7DE;
+    --color-200: #AED09A;
+    --color-300: #66B538;
+    --color-400: #1C4C00;
+    --box-shadow-color: rgba(52, 142, 0, 0.35);
+}
+
+.cards--wrapper {
+
+    --alarm-indicator-green: #66B538;
+    --alarm-indicator-red: #C30000;
+
+    flex: 1;
+    position: relative;
+
+    border-radius: 8px;
+    box-shadow: 0px 0px 8px var(--box-shadow-color);
+
+    font-size: 0.75em;
+    font-weight: 400;
+}
+
+.cards--full-screen {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    cursor: pointer;
+    background: var(--color-400);
+    color: var(--color-100);
+    padding: 0.5em;
+    border-radius: 2px 8px 2px 2px;
+    border: none;
+    outline: none;
+}
+
+.cards--full-screen:hover {
+    transform: scale(1.1);
+}
+
+.cards--header {
+    font-size: 1.125em;
+    font-weight: 700;
+    color: var(--color-400);
+    padding: 1.5em 1em 1em;
+}
+
+.cards--last-data-received {
+    font-size: 0.75em;
+    font-weight: 400;
+}
+
+.cards--temperatures {
+    background-color: var(--color-100);
+    color: var(--color-300);
+    padding: 1em;
+    font-size: 0.875em;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cards--temp-separator {
+    color: var(--color-200);
+    font-size: large;
+}
+
+.cards--vol-cur-table-container {
+    padding: 1em;
+    font-size: 0.875em;
+    font-weight: 400;
+    color: var(--color-300);
+}
+
+.cards--vol-cur-table {
+    width: 100%;
+    line-height: 1.5;
+}
+
+.cards--pow-freq-feed {
+    background-color: var(--color-100);
+    color: var(--color-300);
+    padding: 1em;
+    margin-bottom: 1em;
+    font-size: 0.75em;
+    font-weight: 400;
+    line-height: 1.5;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.cards--energy-row {
+    margin-top: -0.5em;
+    border-top: 1px dashed var(--color-200);
+}
+
+.cards--thd-container {
+    padding: 0 1em 1em;
+    color: var(--color-300);
+}
+
+.cards--thd-title {
+    font-size: 0.75em;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+}
+
+.cards--thd-values {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5em;
+    font-size: 0.75em;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.cards--alarm-header {
+    background-color: var(--color-100);
+    color: var(--color-400);
+    padding: 0.5em;
+    text-align: center;
+    font-size: 0.875em;
+    font-weight: 700;
+}
+
+.cards--alarm-container {
+    padding: 1em;
+    font-size: 0.75em;
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(3, 1fr);
+    color: #1C4C00;
+}
+
+.cards--indicator-alarm-set {
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+}
+
+/* custom general styling */
+.cards--data-color {
+    color: var(--color-400);
+    font-weight: 700;
+
+    text-align: center;
+}
+
+.cards--alarm-indicator-green {
+    background-color: var(--alarm-indicator-green);
+    border-radius: 2px;
+    aspect-ratio: 1;
+    height: 1em;
+}
+
+.cards--alarm-indicator-red {
+    background-color: var(--alarm-indicator-red);
+    border-radius: 2px;
+    aspect-ratio: 1;
+    height: 1em;
+}

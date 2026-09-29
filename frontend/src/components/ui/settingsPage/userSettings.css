@@ -1,0 +1,197 @@
+/* ********************************************************************* */
+/* User Settings */
+/* ********************************************************************* */
+.user-settings--container {
+    flex: 1;
+    height: 100%;
+    overflow: auto;
+}
+
+.user-settings--table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    white-space: nowrap;
+}
+
+.user-settings--table thead {
+    background-color: #426c2a;
+    color: #fff;
+
+    position: sticky;
+    top: 0;
+}
+
+.user-settings--table thead th {
+    padding: 0.75rem;
+}
+
+.user-settings--table tbody tr {
+    height: 2rem;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+}
+
+.user-settings--table tbody td {
+    padding-block: 0.5rem;
+}
+
+.change-password-button {
+    background-color: #426c2a;
+    color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 0.25rem;
+}
+
+.user-settings--table input[type=checkbox] {
+    accent-color: #426c2a;
+}
+
+/* Password */
+.change-password-button:disabled {
+    background-color: #ddd;
+}
+.change-password-button:not(:disabled) {
+    cursor: pointer;
+}
+
+.password-change-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    background-color: #fff;
+}
+
+.password-change-popup form {
+    display: flex;
+    flex-direction: column;
+}
+
+.password-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.password-change-popup label {
+    margin-bottom: 10px;
+}
+
+.password-change-popup input[type="password"] {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+.password-change-popup .password-actions {
+    display: flex;
+    gap: 2%;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.password-change-popup button {
+    flex: 1;
+    background-color: #426c2a;
+    color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.password-change-popup button:hover {
+    opacity: 0.8;
+}
+
+/* Select option tags */
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    background-color: #426c2a;
+    color: #fff;
+    text-align: center;
+    border: none;
+    outline: none;
+    padding: 0.25rem 0.5rem;
+    margin: 0;
+    border-radius: 5px;
+    position: relative;
+}
+
+select::before {
+    content: "\25BC";
+    color: #333;
+    right: 0;
+    top: 0;
+    padding: 12px 0px 10px 15px;
+    position: absolute;
+    pointer-events: none;
+}
+
+select option {
+    text-align: center;
+    border: none;
+    outline: none;
+    color: #000;
+    background-color: #fff;
+    accent-color: #426c2a;
+}
+
+select option:hover,
+select option:focus {
+    background-color: #426c2a;
+    color: #333;
+}
+
+.delete-confirmation-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.delete-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.delete-actions button {
+    width: 5rem;
+    background-color: #426c2a;
+    color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.delete-actions button:hover {
+    opacity: 0.8;
+}
+
+@media screen and (max-width: 768px) {
+    .password-change-popup {
+        width: 90%;
+    }
+}

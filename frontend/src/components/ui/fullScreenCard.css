@@ -1,0 +1,432 @@
+.fullscreen-card--container {
+    --lightest-color: var(--color-100);
+    --light-color: var(--color-200);
+    --lighter-color: var(--color-300);
+    --dark-color: var(--color-400);
+    
+    --dark-black: #333;
+    --alarm-red: #C30000;
+    --alarm-green: #66B538;
+
+    color: var(--dark-black);
+}
+
+/* close button */
+.close-button-wrapper {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+    text-align: right;
+    background-color: #fff;
+}
+
+.fullscreen-card--close-button {
+    background-color: var(--dark-color);
+    color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    padding: 0.25em;
+    cursor: pointer;
+}
+
+.fullscreen-card--close-button:hover {
+    transform: translate(-2px, 2px);
+    scale: 1.1;
+}
+
+/* expand card header */
+.fullscreen-card--header {
+    padding-inline: 1em;
+    padding-top: 1em;
+
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+.fullscreen-card--header p:nth-child(1) {
+    color: var(--dark-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.fullscreen-card--header p:nth-child(2) {
+    margin-left: auto;
+}
+
+.coloured-text {
+    font-weight: 700;
+    color: var(--dark-color);
+}
+
+/* machine details */
+.fullscreen-card--machine-details {
+    padding: 1em;
+    display: flex;
+    gap: 0.5em;
+}
+
+.fullscreen-card--machine-details-box {
+    flex-basis: 100%;
+
+    background: #FFFFFF;
+    box-shadow: 0px 0px 6px rgba(51, 51, 51, 0.2);
+    border-radius: 4px;
+    padding: 1em;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.fullscreen-card--machine-details-box p:nth-child(2) {
+    color: var(--dark-color);
+    margin-top: 0.5rem;
+    text-align: right;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+/* alarms section */
+.fullscreen-card--machine-alarms {
+    box-shadow: 0px 0px 6px rgba(51, 51, 51, 0.2);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0 1em 1em;
+    color: var(--dark-color);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.alarm-title {
+    background-color: var(--lightest-color);
+    padding: 1em;
+}
+
+.fullscreen-card--indicator-alarm-set {
+    display: flex;
+    gap: 0.5em;
+
+    padding: 0.5em;
+}
+
+.fullscreen-cards--alarm-indicator-color {
+    background-color: var(--lighter-color);
+    border-radius: 2px;
+    aspect-ratio: 1;
+    height: 1em;
+}
+
+.fullscreen-cards--alarm-indicator-red {
+    background-color: var(--alarm-red);
+    border-radius: 2px;
+    aspect-ratio: 1;
+    height: 1em;
+}
+
+.fullscreen-cards--alarm-indicator-green {
+    background-color: var(--alarm-green);
+    border-radius: 2px;
+    aspect-ratio: 1;
+    height: 1em;
+}
+
+/* thd voltage current */
+.fullscreen-cards--thd-voltage-current {
+    display: grid;
+    grid-template-columns: 1.75fr 2fr 1fr;
+    gap: 0.5em;
+
+    color: var(--dark-color);
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0 1em 1em;
+}
+
+.fullscreen-cards--demand-energy {
+    grid-template-columns: 1fr 1.4fr;
+}
+
+.flex-box {
+    /* flex-basis: 100%; */
+    box-shadow: 0px 0px 6px rgba(51, 51, 51, 0.2);
+    border-radius: 4px;
+}
+
+.flex-box--title {
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.5em 1em;
+    background-color: var(--lightest-color);
+}
+
+.flex-box--values-wrapper {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    margin: 0.5rem;
+    color: var(--dark-black);
+}
+
+.flex-box--values {
+    text-align: center;
+    line-height: 1.5;
+}
+
+.flex-box--values p:nth-child(2) {
+    color: var(--lighter-color);
+}
+
+/* temp frequency power */
+.fullscreen-cards--temp-freq-power {
+    display: flex;
+    gap: 0.5em;
+
+    margin: 0 1em 1em;
+}
+
+.temp-freq-power--flexbox {
+    flex-basis: 100%;
+
+    padding: 1em;
+    box-shadow: 0px 0px 6px rgba(51, 51, 51, 0.2);
+    border-radius: 4px;
+    color: var(--dark-black);
+    font-size: 1rem;
+    font-weight: 400;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.temp-freq-power--flexbox p:nth-child(2) {
+    color: var(--dark-color);
+    font-weight: 700;
+}
+
+/* Charts */
+.fullscreen-cards--chart-with-tabs {
+    margin: 0 1em 1em;
+
+    box-shadow: 0px 0px 6px rgba(51, 51, 51, 0.2);
+    border-radius: 8px;
+}
+.chart-with-tabs--header {
+    padding: 1em;
+
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.chart-with-tabs--header ul {
+    display: flex;
+
+    box-shadow: 0px 0px 4px rgba(51, 51, 51, 0.25);
+    border-radius: 4px; 
+}
+
+.chart-with-tabs--header ul li {
+    list-style: none;
+    cursor: pointer;
+    background-color: #fff;
+    color: var(--dark-black);
+    outline: none;
+    margin: 0;
+    padding: 0.75rem;
+}
+
+.chart-with-tabs--header ul li.active {
+    background-color: var(--dark-color);
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.chart-with-tabs--button-group-one li:first-child {
+    border-radius: 4px 0 0 4px;
+}
+
+.chart-with-tabs--button-group-one li:last-child {
+    border-radius: 0 4px 4px 0;
+}
+
+.chart-with-tabs--button-group-two li:first-child {
+    border-radius: 4px 0 0 4px;
+}
+
+.chart-with-tabs--button-group-two li:last-child {
+    border-radius: 0 4px 4px 0;
+}
+
+/* media query */
+@media screen and (max-width:820px) {
+
+    /* machine details */
+    .fullscreen-card--machine-details {
+        flex-wrap: wrap;
+    }
+
+    .fullscreen-card--machine-details-box {
+        padding: 0.5em;
+    }
+
+    /* alarms */
+    .fullscreen-card--machine-alarms {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            "alm brkon brkoff"
+            "alm buctrp spch"
+            "alm wti oti"
+            "alm mog prv";
+    }
+
+    .alarm-title {
+        grid-area: alm;
+        
+        height: 100%;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .brk-on {
+        grid-area: brkon;
+    }
+
+    .brk-off {
+        grid-area: brkoff;
+    }
+
+    .buc-alm {
+        grid-area: buctrp;
+    }
+
+    .spr-cha {
+        grid-area: spch;
+    }
+
+    .wti-alm {
+        grid-area: wti;
+    }
+
+    .oti-alm {
+        grid-area: oti;
+    }
+
+    .mog-trp {
+        grid-area: mog;
+    }
+
+    .prv-trp {
+        grid-area: prv;
+    }
+
+    /* thd voltage current */
+    .fullscreen-cards--thd-voltage-current,
+    .fullscreen-cards--demand-energy {
+        grid-template-columns: 1fr;
+    }
+
+    /* temp frequency power */
+    .fullscreen-cards--temp-freq-power {
+        flex-wrap: wrap;
+    }
+
+    /* Charts */
+    .chart-with-tabs--header {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .chart-with-tabs--button-group-one ul,
+    .chart-with-tabs--button-group-two ul {
+        width: 100%;
+    }
+
+    .chart-with-tabs--button-group-one ul li,
+    .chart-with-tabs--button-group-two ul li {
+        flex-basis: 100%;
+        text-align: center;
+    }
+}
+
+/* -------------------Toggle switch------------------ */
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 26px;
+}
+
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    aspect-ratio: 1;
+    width: 20px;
+    left: 0px;
+    bottom: 0px;
+    background-color: #66B538;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #fff;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #ffbb00;
+}
+
+input:checked+.slider:before {
+    background-color: #ffbb00;
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+/* --------------------------------------------------- */

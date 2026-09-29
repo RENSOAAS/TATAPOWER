@@ -1,0 +1,10 @@
+.layout-container {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.children {
+    padding: 5em 0.5em 1em;
+    background-color: #fff;
+}

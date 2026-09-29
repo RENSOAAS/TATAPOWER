@@ -1,0 +1,135 @@
+/* ************************************************* */
+/* Navbar */
+/* ************************************************* */
+.navbar-wrapper {
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+
+    display: flex;
+    gap: 0.25%;
+    align-items: center;
+    z-index: 10;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 4.5rem;
+    background-color: #fff;
+}
+
+/* Logo section */
+.logo-container {
+    text-decoration: none;
+}
+
+.tata-logo {
+    height: 3.5em;
+}
+
+/* toggle active classes */
+.tab-is-active {
+    color: #1C4C00;
+    font-weight: 700;
+
+    position: relative;
+}
+
+.tab-is-active::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    border-top: 4px solid #66B538;
+    border-radius: 10px;
+    width: 80%;
+}
+
+.tab-is-not-active {
+    text-decoration: none;
+    color: #1C4C00;
+    font-weight: 400;
+}
+
+/* navbar menus */
+.menu-items {
+    margin: auto 2% auto auto;
+    width: 50%;
+}
+
+.menu-items ul{
+    list-style: none;
+    display: flex;
+    gap: 2.5%;
+    justify-content: flex-end;
+}
+
+.menu-items ul a {
+    text-decoration: none;
+}
+
+/* Clock */
+.navbar--clock-container {
+    color: #222;
+    font-weight: 400;
+    font-size: 16px;
+    margin-right: 1em;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.navbar--clock-container h3{
+    font-weight: 700;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+/* hamburger */
+@media (max-width: 768px) {
+    .navbar-container {
+        padding-left: 1.5em;
+        justify-content: space-between;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .menu-items {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        background-color: #fff;
+        z-index: 1;
+        display: none;
+        padding: 20px;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+            0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .menu-items.active {
+        display: flex;
+        flex-direction: column;
+        transform: translateX(0%);
+    }
+
+    .menu-items ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .menu-items li {
+        margin: 10px 0;
+    }
+
+    .tab-is-active::before {
+        width: 100%;
+    }
+}

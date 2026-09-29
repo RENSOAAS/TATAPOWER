@@ -1,0 +1,137 @@
+.dashboard--container {
+    border: 1px solid #D7D7D7;
+    border-radius: 8px;
+    padding: 0.75em;
+}
+
+.dashboard--machines-info-boxes {
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: #66B538;
+
+    display: flex;
+    gap: 1em;
+}
+
+.dashboard--machiches-info-box {
+    flex-basis: 100%;
+
+    border: 1px solid #FFFFFF;
+    box-shadow: 0px 0px 8px rgba(55, 66, 72, 0.24);
+    border-radius: 8px;
+    padding: 0.5em;
+}
+
+.dashboard--machiches-info-box p:last-child {
+    font-weight: 700;
+    color: #1C4C00;
+    text-align: right;
+    margin-top: 0.5em;
+}
+
+.dashboard--machiches-info-box:first-child {
+    color: #226baf;
+}
+
+.dashboard--machiches-info-box:first-child p:last-child {
+    color: #1261a9;
+}
+
+.dashboard--machiches-info-box:nth-child(3) {
+    color: #D74F4F;
+}
+
+.dashboard--machiches-info-box:nth-child(3) p:last-child {
+    color: #C30000;
+}
+
+.dashboard--machiches-info-box:last-child {
+    color: #EEB519;
+}
+
+.dashboard--machiches-info-box:last-child p:last-child {
+    color: #E98300;
+}
+
+.dashboard--comm-error-box {
+    color: #D74F4F !important;
+    cursor: pointer;
+}
+
+.dashboard--comm-error-box p:last-child {
+    color: #C30000 !important;
+}
+
+.dashboard--comm-error-box:hover {
+    box-shadow: 0px 0px 8px rgba(195, 0, 0, 0.4);
+}
+
+.dashboard--comm-error-modal {
+    padding: 1em;
+}
+
+.dashboard--comm-error-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.dashboard--comm-error-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875em;
+}
+
+.dashboard--comm-error-table th,
+.dashboard--comm-error-table td {
+    padding: 0.5em;
+    text-align: left;
+    border-bottom: 1px solid #D7D7D7;
+}
+
+.dashboard--generation-boxes {
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: #1C4C00;
+
+    display: flex;
+    gap: 1em;
+    margin-top: 0.75em;
+}
+
+.dashboard--generation-box {
+    flex-basis: 100%;
+
+    background-color: #E9F7DE;
+    border: 1px solid #FFFFFF;
+    box-shadow: 0px 0px 8px rgba(55, 66, 72, 0.24);
+    border-radius: 8px;
+    padding: 0.5em;
+}
+
+.dashboard--generation-box p:last-child {
+    font-weight: 700;
+    text-align: right;
+    margin-top: 0.5em;
+}
+
+/* Cards */
+.dashboard--machine-cards {
+    width: 100%;
+    margin-top: 0.75em;
+
+    display: grid;
+    gap: 0.5em;
+    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+}
+
+/* Media query */
+@media screen and (max-width:820px) {
+    .dashboard--machines-info-boxes,
+    .dashboard--generation-boxes {
+        display: grid;
+        gap: 0.5em;
+        grid-template-columns: 1fr 1fr;
+    }
+}

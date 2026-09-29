@@ -1,0 +1,1 @@
+{"HOST":"localhost","PASSWORD":"replace-with-your-postgres-password","DB_PORT":"5432","DATABASE":"tata-database","USER":"postgres"}

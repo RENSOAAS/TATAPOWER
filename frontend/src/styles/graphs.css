@@ -1,0 +1,102 @@
+.graphs--wrapper {
+    border: 1px solid #D7D7D7;
+    border-radius: 8px;
+    height: calc(100dvh - 6em);
+    overflow: auto;
+}
+
+.graphs--heading {
+    display: flex;
+    align-items: center;
+}
+
+.graphs--header {
+    padding: 0.5em 1em;
+    color: #426C2A;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.graphs--filters {
+    margin-left: auto;
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    padding: 1rem;
+}
+
+.dropbtn[disabled] {
+    background-color: #d7d7d7;
+    cursor: none;
+}
+
+.graphs--graph-area {
+    padding: 0 1.25em;
+}
+
+.graphs--tab-navs ul {
+    display: flex;
+    list-style: none;
+}
+
+.graphs--tab-navs ul li {
+    list-style: none;
+    cursor: pointer;
+    background-color: #fff;
+    color: var(--dark-black);
+    outline: 1px solid #d7d7d7;
+    margin: 0;
+    padding: 0.75rem;
+    transition: transform 0.1s ease-in;
+
+    display: flex;
+    align-items: center;
+}
+
+.graphs--tab-navs ul li.active {
+    background-color: #426C2A;
+    color: #fff;
+    transform: scale(1.1);
+    outline: none;
+}
+
+.graphs--tab-navs ul li:first-child {
+    border-radius: 4px 0 0 4px;
+}
+
+.graphs--tab-navs ul li:last-child {
+    border-radius: 0 4px 4px 0;
+}
+
+.graphs--chart-area {
+    list-style: none;
+}
+
+@media screen and (max-width:820px) {
+    .graphs--heading {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .graphs--heading > * {
+        margin-left: 0;
+    }
+    
+    .dropbtn[disabled] {
+        display: none;
+    }
+
+    .graphs--filters {
+        gap: 0;
+        padding-top: 0;
+    }
+
+    .graphs--filters .dropdown {
+        margin-left: 0;
+    }
+
+    .graphs--filters .dropdown .dropdown-content {
+        left: 0;
+        width: 16.1875rem;
+    }
+}

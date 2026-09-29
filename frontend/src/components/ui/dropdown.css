@@ -1,0 +1,92 @@
+.select-box--container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    outline: 1px solid #426C2A;
+    color: #426C2A;
+    font-size: 14px;
+    font-weight: 400;
+
+    display: flex;
+    align-content: center;
+    
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.select-box--box {
+    width: 200px;
+    height: 2rem;
+    position: relative;
+}
+
+.select-box--items {
+    position: absolute;
+    top: 100%;
+    left: -1px;
+
+    width: 100%;
+    height: 25dvh;
+    overflow: auto;
+    background-color: #fff;
+    color: #426C2A;
+    border: 1px solid #426C2A;
+    z-index: 1;
+}
+
+.select-box--selected-item {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    padding: 11px 16px;
+}
+
+.select-box--items div {
+    padding: 6px;
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+.select-box--items div:hover {
+    background-color: #426C2A;
+    color: #fff;
+}
+
+.select-box--arrow {
+    width: 30px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    background: #426C2A;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.select-box--arrow-down {
+    position: absolute;
+    top: 12px;
+    right: 7px;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 10px solid #fff;
+}
+
+.select-box--arrow-up {
+    position: absolute;
+    top: 12px;
+    right: 7px;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 10px solid #fff;
+}

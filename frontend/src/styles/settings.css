@@ -1,0 +1,121 @@
+.alert {
+    display: grid;
+    box-sizing: border-box;
+    height: 2.5rem;
+    align-content: center;
+    justify-content: center;
+    box-shadow: 0 0 0.375rem rgba(66, 71, 76, 0.32);
+    border: 1px solid;
+    border-radius: 0.3125rem;
+    font-size: 1rem;
+}
+
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.alert-info {
+    color: #0c5460;
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+}
+
+/* ********************************** */
+/* Settings Page */
+/* ********************************** */
+.settings-page-wrapper {
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 6px rgba(46, 73, 87, 0.18);
+    border-radius: 5px;
+
+    height: calc(100dvh - 6rem);
+    padding: 1rem;
+}
+
+.settings-page-header {
+    display: flex;
+    align-items: center;
+}
+
+.settings-page-header h3 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+/* Tab switches */
+.settings-buttons-container {
+    display: flex;
+
+    width: fit-content;
+}
+
+.settings-buttons-container li {
+    flex: 1;
+
+    text-align: center;
+    list-style: none;
+    padding: 0.5rem;
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    border-bottom: none;
+}
+
+.settings-buttons-container li:not(:last-child) {
+    border-right: none;
+}
+
+.settings-buttons-container li:first-child {
+    border-radius: 5px 0 0 0;
+}
+
+.settings-buttons-container li:last-child {
+    border-radius: 0 5px 0 0;
+}
+
+.settings-buttons-container li.active {
+    background-color: #426C2A;
+    color: #fff;
+    border-color: #426C2A;
+}
+
+.settings-page-contents-container {
+    border: 1px solid rgba(46, 73, 87, 0.18);
+    border-radius: 0 5px 5px 5px;
+    height: calc(100% - 2rem);
+}
+
+.settings-page-wrapper .TabContent {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width:820px) {
+    .settings-page-header {
+        gap: 0.5em;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .settings-buttons-container {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .settings-page-contents-container {
+        border-radius: 0 0 5px 5px;
+    }
+
+    .feeder-settings--form,
+    .db-settings--form,
+    .mqtt-settings--form,
+    .email-settings--form {
+        width: 90%;
+    }
+}

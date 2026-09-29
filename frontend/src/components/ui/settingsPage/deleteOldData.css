@@ -1,0 +1,22 @@
+.delete-old-data--container {
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+}
+
+.delete-old-data--wrapper {
+    display: inline-flex;
+    align-items: center;
+    gap: 1em;
+    font-size: 1.25rem;
+}
+
+.delete-old-data--wrapper button {
+    background-color: red;
+    border-radius: 5px;
+    color: #fff;
+    outline: none;
+    border: none;
+    padding: 0.75rem 2rem;
+    cursor: pointer;
+}

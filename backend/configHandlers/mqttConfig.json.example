@@ -1,0 +1,1 @@
+{"PORT":"1883","HOST":"your-mqtt-broker-host","USERNAME":"replace-with-username","PASSWORD":"replace-with-password","PROTOCOL":"mqtt"}
