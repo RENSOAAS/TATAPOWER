@@ -9,8 +9,8 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import { io } from "socket.io-client";
 
-const SOCKET_URL = process.env.REACT_APP_SOCKET_URL || "https://tatapower.esys.co.in:3003";
-const socket = io(SOCKET_URL, { secure: SOCKET_URL.startsWith("https") });
+const SOCKET_URL = process.env.REACT_APP_SOCKET_URL || window.location.origin;
+const socket = io(SOCKET_URL, { secure: window.location.protocol === "https:" });
 
 const Dashboard = () => {
     const [bypassedMachines, setBypassedMachines] = useState([]);
@@ -158,10 +158,13 @@ const Dashboard = () => {
                     const generatedToday = generationSummary.machines
                         ? generationSummary.machines[machineName]
                         : undefined;
+                    const generatedMonth = generationSummary.machinesMonth
+                        ? generationSummary.machinesMonth[machineName]
+                        : undefined;
                     return (
                         <Cards
                             key={machineName}
-                            data={{ machineName, dataToShow, feed_num, generatedToday }}
+                            data={{ machineName, dataToShow, feed_num, generatedToday, generatedMonth }}
                             isBypassed={isBypassed}
                             onBypassToggle={handleBypassToggle}
                             

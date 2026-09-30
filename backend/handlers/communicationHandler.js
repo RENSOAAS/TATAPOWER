@@ -50,10 +50,19 @@ exports.getCommunicationErrors = async (req, res) => {
             })
         );
 
+        // A machine that has sent data today is communicating, so it is not an
+        // error even if its latest reading was flagged; only machines whose last
+        // reading is from an earlier day (or that never reported) stay listed.
+        const todayStart = new Date();
+        todayStart.setHours(0, 0, 0, 0);
+        const errorMachines = machines.filter(
+            (m) => !m.lastValidReading || new Date(m.lastValidReading.log_time) < todayStart
+        );
+
         return res.status(200).json({
             status: true,
-            count: machines.length,
-            machines
+            count: errorMachines.length,
+            machines: errorMachines
         });
     } catch (error) {
         return res.status(500).json({ status: false, message: error.message });

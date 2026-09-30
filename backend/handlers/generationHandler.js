@@ -12,8 +12,13 @@ async function getEnergyDelta(wegid, sinceDate) {
     );
     if (!latest || latest.totactenergy === null) return null;
 
+    // A baseline older than 24h means the machine had no data around the period
+    // start (offline, or migrated history with a gap) - using it would count
+    // the whole gap as generated within the period.
     const beforeBoundary = await db.oneOrNone(
-        `SELECT totactenergy FROM $1:name WHERE log_time <= $2 ORDER BY log_time DESC LIMIT 1`,
+        `SELECT totactenergy FROM $1:name
+         WHERE log_time <= $2 AND log_time >= $2::timestamp - interval '24 hours'
+         ORDER BY log_time DESC LIMIT 1`,
         [table, sinceDate]
     );
     const afterBoundary = await db.oneOrNone(
@@ -115,8 +120,10 @@ exports.getGenerationSummary = async (req, res) => {
             );
 
             const machines = {};
+            const machinesMonth = {};
             wegidList.forEach((id, i) => {
                 machines[id] = summaries[i].day === null ? null : Number(summaries[i].day.toFixed(2));
+                machinesMonth[id] = summaries[i].month === null ? null : Number(summaries[i].month.toFixed(2));
             });
 
             const persistEntries = [];
@@ -141,7 +148,8 @@ exports.getGenerationSummary = async (req, res) => {
                     day: Number(total.day.toFixed(2)),
                     month: Number(total.month.toFixed(2)),
                     year: Number(total.year.toFixed(2)),
-                    machines
+                    machines,
+                    machinesMonth
                 }
             });
         }

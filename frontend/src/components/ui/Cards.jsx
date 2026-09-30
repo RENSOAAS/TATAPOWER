@@ -43,7 +43,7 @@ const Cards = (props) => {
         }
     };
 
-    const { machineName, dataToShow, generatedToday } = props.data;
+    const { machineName, dataToShow, generatedToday, generatedMonth } = props.data;
 
     if (dataToShow !== undefined) {
         var {
@@ -62,7 +62,6 @@ const Cards = (props) => {
     
             frequency,
 
-            tot_act_energy,
             ap_max_demand,
             app_max_demand,
 
@@ -228,8 +227,8 @@ const Cards = (props) => {
             
             <div className='cards--pow-freq-feed cards--energy-row'>
                 <div>
-                    <p>Energy(kWh)</p>
-                    <p className='cards--data-color'>{tot_act_energy ?? '-'}</p>
+                    <p>Energy(kWh/M)</p>
+                    <p className='cards--data-color'>{generatedMonth ?? '-'}</p>
                 </div>
                 <div>
                     <p>Max Demand(kW)</p>
